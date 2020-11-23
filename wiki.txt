@@ -1,0 +1,33 @@
+# chinese wiki
+http://openpilot.sdut.me/cn/FAQ.html
+
+
+# Video log
+function download_openpilot {
+  scp -r -P 8022 -i ~/.ssh/github_id_rsa root@192.168.0.54:/storage/self/primary/realdata/ ~/Downloads/
+}
+
+# Change openpilot:
+cd /data/openpilot && git clean -xdf && git reset --hard HEAD && git checkout release2-staging && scons -i && reboot
+
+# android settings open/close
+am start -a android.settings.SETTINGS
+ps aux | grep settings| grep  -v grep|awk '{print $1}' |xargs kill
+
+# To test apk
+cd ~/Downloads/openpilot/openpilot-apks/offroad
+./build.sh
+adb connect 192.168.0.54:5555
+adb uninstall ai.comma.plus.offroad
+adb install -r ai.comma.plus.offroad.apk 
+adb shell monkey -p ai.comma.plus.offroad -v 500
+
+# To really install apk
+move the apk to openpilot git, and pull from eon
+
+# To fix submodules
+rm -rf cereal/ laika_repo/ openpilot-apks/ panda/ opendbc/; git submodule init; git submodule update;
+
+# Get serial
+getprop oem.device.imeicache
+getprop ro.serialno

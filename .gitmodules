@@ -13,3 +13,6 @@
 [submodule "rednose_repo"]
 	path = rednose_repo
 	url = ../../commaai/rednose.git
+[submodule "openpilot-apks"]
+	path = openpilot-apks
+	url = ../../cqxmzz/openpilot-apks

@@ -1,0 +1,455 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"left",
+				"left_control"
+			],
+			[
+				"le",
+				"left_command"
+			],
+			[
+				"r",
+				"request"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"fir",
+				"firstTime"
+			],
+			[
+				"fb",
+				"fb_config"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"res",
+				"response"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/qimche/Downloads/notes.txt",
+			"settings":
+			{
+				"buffer_size": 289,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Scons.sublime-build",
+			"settings":
+			{
+				"buffer_size": 53,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "untitled.sublime-build"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"github",
+				"GitHub: Switch Accounts"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package controll s",
+				"Package Control: List Packages"
+			],
+			[
+				"limebox",
+				"Limebox: User Settings"
+			],
+			[
+				"limebox: us",
+				"Limebox: User Settings"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"add re",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 128.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 190.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" - need branch",
+			"CommaApi",
+			"_get_segments_remote",
+			"PHONELIBS=",
+			"make",
+			"EXPLORER_FILE_RE",
+			"Could not find segments for route",
+			"capnp",
+			"pip",
+			"path",
+			"python",
+			"+",
+			"distance",
+			"@37",
+			"@36",
+			"steeringTorqueEps",
+			"qimche",
+			"opEdit",
+			"op_edit",
+			"opEdit",
+			"live",
+			"op_params",
+			"opParams",
+			"indi",
+			"corollaTSS2_use_indi",
+			"opEdit",
+			"dashcam",
+			"dashcamOnly",
+			"dashcam",
+			"realdata",
+			"/storage/self/primary/realdata/",
+			"video",
+			"op_edit",
+			"leftBlinker",
+			"distanceLines",
+			"DISTANCE_LINES",
+			"distance",
+			"DISTANCE_LINES",
+			"PCM_CRUISE_SM",
+			"v_ego",
+			"run_mpc",
+			"cur_state",
+			"x_ego",
+			"v_ego",
+			"tr",
+			"run_mpc",
+			"acado_preparationStep",
+			"preparationStep",
+			"acado_preparationStep",
+			"run_mpc",
+			"init_with_simulation",
+			"libmpc",
+			"libmpc_py",
+			"longitudinal_mpc",
+			"libmpc_py",
+			"libmpc",
+			"run_mpc",
+			"acado_preparationStep",
+			"acado_feedbackStep",
+			"run_mpc",
+			"libmpc",
+			"run_mpc",
+			"Calculate mpc",
+			"tr ",
+			"if state == State",
+			"if state == State.",
+			"if state == State.disabled:",
+			"soft_disable_timer = max(0, soft_disable_timer - 1)",
+			"soft_disable_timer",
+			"statetransition",
+			"statetran",
+			"state",
+			"second",
+			"LDW_MIN_SPEED",
+			"brakePressed",
+			"AudibleAlert",
+			"steerRequired",
+			"enum ",
+			"wrongConfig",
+			"leftBlinker",
+			"distanceLines",
+			"PCM_CRUISE_SM",
+			"DISTANCE_LINES",
+			"parse_gear_shifter",
+			"GearShifter",
+			"vl",
+			"DISTANCE_LINES",
+			"carstate",
+			"DISTANCE_LINES",
+			"carstate",
+			"car",
+			"CarState",
+			"DSU_CRUISE",
+			"MAIN_ON",
+			"WHEEL_SPEED_FL",
+			"AUTO_HIGH_BEAM",
+			"BRAKE_LIGHTS_ACC",
+			"PERMIT_BRAKING",
+			"BRAKE_LIGHTS_ACC",
+			"UI_SET_SPEED",
+			"DISTANCE_LINES",
+			"921",
+			"SET_SPEED",
+			"DISTANCE_LINES",
+			"SET_SPEED",
+			"ACCEL_CMD",
+			"main_on",
+			"SET_SPEED",
+			"brake_pressed",
+			"distance",
+			"LEAD_DISTANCE",
+			"224",
+			"BRAKE_PRESSED",
+			"BRAKE_STATUS",
+			"LEAD_DISTANCE",
+			"UI_SET_SPEED",
+			"CRUISE_CONTROL_STATE",
+			"avg",
+			"a v g",
+			"DISTANCE_LINES",
+			"dista"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/qimche/Downloads/notes.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Scons.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 66.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 374.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 362.0
+	},
+	"output.exec":
+	{
+		"height": 260.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Scons.sublime-build",
+	"project": "openpilot.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
