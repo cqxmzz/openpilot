@@ -126,19 +126,26 @@ int main(int argc, char* argv[]) {
   const bool LEON = util::read_file("/proc/cmdline").find("letv") != std::string::npos;
 
   float brightness_b = 0, brightness_m = 0;
-  int result = read_param(&brightness_b, "BRIGHTNESS_B", true);
-  result += read_param(&brightness_m, "BRIGHTNESS_M", true);
-  if (result != 0) {
-    brightness_b = LEON ? 10.0 : 5.0;
-    brightness_m = LEON ? 2.6 : 1.3;
-    write_param_float(brightness_b, "BRIGHTNESS_B", true);
-    write_param_float(brightness_m, "BRIGHTNESS_M", true);
+  int result = read_param(&brightness_b, "CustomBrightnessBase");
+  result += read_param(&brightness_m, "CustomBrightnessIncrement");
+  if(result != 0) {
+    brightness_b = LEON ? 1023.0 : 5.0;
+    brightness_m = LEON ? 0.0 : 1.3;
+    write_param_float(brightness_b, "CustomBrightnessBase");
+    write_param_float(brightness_m, "CustomBrightnessIncrement");
   }
-  float smooth_brightness = brightness_b;
+  
+  int volume_multiplier = 0;
+  int result = read_param(&volume_multiplier, "CustomVolumeMultiplier");
+  if(result != 0) {
+    volume_multiplier = 100;
+    write_param_float(volume_multiplier, "CustomVolumeMultiplier");
+  }
+  float smooth_brightness = 512.0f;
 
   const int MIN_VOLUME = LEON ? 12 : 9;
   const int MAX_VOLUME = LEON ? 15 : 12;
-  s->sound->setVolume(MIN_VOLUME);
+  s->sound->setVolume(MIN_VOLUME * volume_multipolier / 100);
 
   while (!do_exit) {
     if (!s->started) {
@@ -163,11 +170,12 @@ int main(int argc, char* argv[]) {
     }
 
     // up one notch every 5 m/s
-    s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5));
+    s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5) * volume_multipolier / 100);
 
     // set brightness
-    float clipped_brightness = fmin(512, (s->light_sensor*brightness_m) + brightness_b);
-    smooth_brightness = fmin(255, clipped_brightness * 0.01 + smooth_brightness * 0.99);
+    float ideal_brightness = std::log(s->light_sensor) / std::log(10) * brightness_m + brightness_b;
+    float clipped_brightness = fmax(0.0f, fmin(1023.0f, ideal_brightness));
+    smooth_brightness = fmax(0.0f, fmin(1023.0f, clipped_brightness * 0.01 + smooth_brightness * 0.99));
     ui_set_brightness(s, (int)smooth_brightness);
 
     update_offroad_layout_state(s, pm);

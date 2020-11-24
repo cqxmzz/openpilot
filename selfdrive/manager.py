@@ -548,6 +548,13 @@ def main():
     ("VisionRadarToggle", "0"),
     ("LaneChangeEnabled", "1"),
     ("IsDriverViewEnabled", "0"),
+
+    ("CustomVolumeMultiplier", "100"),
+    ("CustomBrightnessBase", "1023.0"),
+    ("CustomBrightnessIncrement", "0.0"),
+    ("CustomCameraOffset", "6"),
+    ("CustomAllowGas", "1"),
+    ("CustomGasSetSpeed", "0"),
   ]
 
   # set unset params
