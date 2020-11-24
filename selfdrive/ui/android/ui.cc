@@ -134,7 +134,7 @@ int main(int argc, char* argv[]) {
   }
   
   int volume_multiplier = 0;
-  int result = read_param(&volume_multiplier, "CustomVolumeMultiplier");
+  result = read_param(&volume_multiplier, "CustomVolumeMultiplier");
   if(result != 0) {
     volume_multiplier = 100;
     write_param_float(volume_multiplier, "CustomVolumeMultiplier");
@@ -143,7 +143,7 @@ int main(int argc, char* argv[]) {
 
   const int MIN_VOLUME = 12;
   const int MAX_VOLUME = 15;
-  s->sound->setVolume(MIN_VOLUME * volume_multipolier / 100);
+  s->sound->setVolume(MIN_VOLUME * volume_multiplier / 100);
 
   while (!do_exit) {
     if (!s->scene.started) {
@@ -168,7 +168,7 @@ int main(int argc, char* argv[]) {
     }
 
     // up one notch every 5 m/s
-    s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5) * volume_multipolier / 100);
+    s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5) * volume_multiplier / 100);
 
     // set brightness
     float ideal_brightness = log(s->light_sensor) / log(10) * brightness_m + brightness_b;
