@@ -34,15 +34,18 @@ getprop ro.serialno
 
 ==================================
 
-Show ip
-Parameter store (probably Opedit)
+Show ip - done
+Serial number - done - imei and panda hardware written
+Battery - done
 
-Serial number - investigate
+brightness - testing
+volume - testing
 
 No disengage for gas
 Gas sets speed
 Hold button increase speed by 5mph
 Allow lower speed
+Show front distance
 Distance profiles integrate with toyota
 Tune smoother control
 Dynamic gas
@@ -50,3 +53,4 @@ PID lat-long
 
 Slow for curve - research
 Traffic sign - research
+Parameter store (probably Opedit)
