@@ -31,3 +31,22 @@ rm -rf cereal/ laika_repo/ openpilot-apks/ panda/ opendbc/; git submodule init; 
 # Get serial
 getprop oem.device.imeicache
 getprop ro.serialno
+
+==================================
+
+Show ip
+Parameter store (probably Opedit)
+
+Serial number - investigate
+
+No disengage for gas
+Gas sets speed
+Hold button increase speed by 5mph
+Allow lower speed
+Distance profiles integrate with toyota
+Tune smoother control
+Dynamic gas
+PID lat-long
+
+Slow for curve - research
+Traffic sign - research
