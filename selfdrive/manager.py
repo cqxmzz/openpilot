@@ -551,12 +551,12 @@ def main():
     ("LaneChangeEnabled", "1"),
     ("IsDriverViewEnabled", "0"),
 
-    ("CustomVolumeMultiplier", "100"),
-    ("CustomBrightnessBase", "1023.0"),
-    ("CustomBrightnessIncrement", "0.0"),
-    ("CustomCameraOffset", "6"),
-    ("CustomAllowGas", "1"),
-    ("CustomGasSetSpeed", "0"),
+    ("VolumeMultiplier", "100"),
+    ("BrightnessBase", "1023.0"),
+    ("BrightnessIncrement", "0.0"),
+    ("CameraOffset", "6"),
+    ("AllowGas", "1"),
+    ("GasSetSpeed", "0"),
   ]
 
   # set unset params

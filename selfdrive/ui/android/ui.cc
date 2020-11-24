@@ -124,20 +124,20 @@ int main(int argc, char* argv[]) {
 
   // light sensor scaling and volume params
   float brightness_b = 0, brightness_m = 0;
-  int result = read_param(&brightness_b, "CustomBrightnessBase");
-  result += read_param(&brightness_m, "CustomBrightnessIncrement");
+  int result = read_param(&brightness_b, "BrightnessBase");
+  result += read_param(&brightness_m, "BrightnessIncrement");
   if(result != 0) {
     brightness_b = LEON ? 1023.0 : 5.0;
     brightness_m = LEON ? 0.0 : 1.3;
-    write_param_float(brightness_b, "CustomBrightnessBase");
-    write_param_float(brightness_m, "CustomBrightnessIncrement");
+    write_param_float(brightness_b, "BrightnessBase");
+    write_param_float(brightness_m, "BrightnessIncrement");
   }
   
   int volume_multiplier = 0;
-  result = read_param(&volume_multiplier, "CustomVolumeMultiplier");
+  result = read_param(&volume_multiplier, "VolumeMultiplier");
   if(result != 0) {
     volume_multiplier = 100;
-    write_param_float(volume_multiplier, "CustomVolumeMultiplier");
+    write_param_float(volume_multiplier, "VolumeMultiplier");
   }
   float smooth_brightness = 512.0f;
 
