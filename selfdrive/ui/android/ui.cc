@@ -171,7 +171,7 @@ int main(int argc, char* argv[]) {
     s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5) * volume_multipolier / 100);
 
     // set brightness
-    float ideal_brightness = std::log(s->light_sensor) / std::log(10) * brightness_m + brightness_b;
+    float ideal_brightness = log(s->light_sensor) / log(10) * brightness_m + brightness_b;
     float clipped_brightness = fmax(0.0f, fmin(1023.0f, ideal_brightness));
     smooth_brightness = fmax(0.0f, fmin(1023.0f, clipped_brightness * 0.01 + smooth_brightness * 0.99));
     ui_set_brightness(s, (int)smooth_brightness);
