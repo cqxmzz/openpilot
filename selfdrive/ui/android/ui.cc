@@ -129,7 +129,7 @@ int main(int argc, char* argv[]) {
   int result = read_param(&brightness_b, "BrightnessBase");
   result += read_param(&brightness_m, "BrightnessIncrement");
   if(result != 0) {
-    brightness_b = LEON ? 1023.0 : 5.0;
+    brightness_b = LEON ? 255.0 : 5.0;
     brightness_m = LEON ? 0.0 : 1.3;
     write_param_float(brightness_b, "BrightnessBase");
     write_param_float(brightness_m, "BrightnessIncrement");
@@ -141,7 +141,7 @@ int main(int argc, char* argv[]) {
     volume_multiplier = 100;
     write_param_float(volume_multiplier, "VolumeMultiplier");
   }
-  float smooth_brightness = 512.0f;
+  float smooth_brightness = 128.0f;
 
   const int MIN_VOLUME = LEON ? 12 : 9;
   const int MAX_VOLUME = LEON ? 15 : 12;
@@ -173,9 +173,10 @@ int main(int argc, char* argv[]) {
     s->sound->setVolume(fmin(MAX_VOLUME, MIN_VOLUME + s->scene.car_state.getVEgo() / 5) * volume_multiplier / 100);
 
     // set brightness
-    float ideal_brightness = log(s->light_sensor) / log(10) * brightness_m + brightness_b;
-    float clipped_brightness = fmax(0.0f, fmin(1023.0f, ideal_brightness));
-    smooth_brightness = fmax(0.0f, fmin(1023.0f, clipped_brightness * 0.01 + smooth_brightness * 0.99));
+    float ideal_brightness = exp2(log2(s->light_sensor) * brightness_m + brightness_b);
+
+    float clipped_brightness = fmax(5.0f, fmin(255.0f, ideal_brightness));
+    smooth_brightness = fmax(5.0f, fmin(255.0f, clipped_brightness * 0.01 + smooth_brightness * 0.99));
     ui_set_brightness(s, (int)smooth_brightness);
 
     update_offroad_layout_state(s, pm);
