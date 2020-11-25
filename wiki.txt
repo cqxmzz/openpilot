@@ -40,8 +40,8 @@ Battery - done
 
 brightness - testing
 volume - testing
+No disengage for gas - testing
 
-No disengage for gas
 Gas sets speed
 Hold button increase speed by 5mph
 Allow lower speed
