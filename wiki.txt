@@ -35,7 +35,7 @@ getprop ro.serialno
 ==================================
 
 Show ip - done
-Serial number - done - imei and panda hardware written
+Serial number - done - serial:imei, dongleId:api, pandaDongleId:hardware
 Battery - done
 
 brightness - testing
