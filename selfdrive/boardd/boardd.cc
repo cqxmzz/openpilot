@@ -105,7 +105,17 @@ void safety_setter_thread() {
   cereal::CarParams::Reader car_params = cmsg.getRoot<cereal::CarParams>();
   cereal::CarParams::SafetyModel safety_model = car_params.getSafetyModel();
 
-  panda->set_unsafe_mode(0);  // see safety_declarations.h for allowed values
+  std::string allow_gas = Params().get("AllowGas");
+  if (allow_gas == "") {
+    Params().write_db_value("AllowGas", "0");
+  }
+
+  // see safety_declarations.h for allowed values
+  if (allow_gas == "1") {
+    panda->set_unsafe_mode(1);
+  } else {
+    panda->set_unsafe_mode(0);
+  }
 
   auto safety_param = car_params.getSafetyParam();
   LOGW("setting safety model: %d with param %d", (int)safety_model, safety_param);
