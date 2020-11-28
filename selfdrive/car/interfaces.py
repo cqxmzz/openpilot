@@ -37,7 +37,7 @@ class CarInterfaceBase():
       self.CC = CarController(self.cp.dbc_name, CP, self.VM)
 
   params = Params()
-    self.allowGas = True if params.get("AllowGas", encoding='utf8') == "1" else False
+  self.allowGas = True if params.get("AllowGas", encoding='utf8') == "1" else False
 
   @staticmethod
   def calc_accel_override(a_ego, a_target, v_ego, v_target):
