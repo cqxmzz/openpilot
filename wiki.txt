@@ -4,7 +4,7 @@ http://openpilot.sdut.me/cn/FAQ.html
 
 # Video log
 function download_openpilot {
-  scp -r -P 8022 -i ~/.ssh/github_id_rsa root@192.168.0.54:/storage/self/primary/realdata/ ~/Downloads/
+  scp -r -P 8022 -i ~/.ssh/openpilot_rsa root@192.168.0.54:/storage/self/primary/realdata/ ~/Downloads/
 }
 
 # Change openpilot:
@@ -38,10 +38,10 @@ getprop ro.serialno
 Show ip - done
 Serial number - done - serial:imei, dongleId:api, pandaDongleId:hardware
 Battery - done
-brightness - done
+Brightness - done
 
 * Basic Func
-volume - testing
+Volume - testing
 No disengage for gas - testing
 Show front distance
 
