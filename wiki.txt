@@ -34,23 +34,29 @@ getprop ro.serialno
 
 ==================================
 
+* UI
 Show ip - done
 Serial number - done - serial:imei, dongleId:api, pandaDongleId:hardware
 Battery - done
+brightness - done
 
-brightness - testing
+* Basic Func
 volume - testing
 No disengage for gas - testing
+Show front distance
 
+* Basic Control
 Gas sets speed
 Hold button increase speed by 5mph
 Allow lower speed
-Show front distance
 Distance profiles integrate with toyota
+
+* Tuning
 Tune smoother control
 Dynamic gas
 PID lat-long
 
+* Research
 Slow for curve - research
 Traffic sign - research
 Parameter store (probably Opedit)
