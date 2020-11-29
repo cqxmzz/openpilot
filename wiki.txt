@@ -52,6 +52,7 @@ Allow lower speed
 Distance profiles integrate with toyota
 
 * Tuning
+Parameter store (probably Opedit)
 Tune smoother control
 Dynamic gas
 PID lat-long
@@ -59,4 +60,3 @@ PID lat-long
 * Research
 Slow for curve - research
 Traffic sign - research
-Parameter store (probably Opedit)
