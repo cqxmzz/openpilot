@@ -41,8 +41,8 @@ Battery - done
 Brightness - done
 
 * Basic Func
-Volume - testing
-No disengage for gas - testing
+Volume - done
+No disengage for gas - done
 Show front distance
 
 * Basic Control
