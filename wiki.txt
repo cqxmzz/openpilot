@@ -52,6 +52,7 @@ Allow lower speed
 Distance profiles integrate with toyota
 
 * Tuning
+Lower speed lane change
 Parameter store (probably Opedit)
 Tune smoother control
 Dynamic gas
