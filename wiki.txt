@@ -43,7 +43,7 @@ Brightness - done
 * Basic Func
 Volume - done
 No disengage for gas - done
-Show front distance
+Show front distance - not tested
 
 * Basic Control
 Gas sets speed
