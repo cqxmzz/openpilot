@@ -238,9 +238,9 @@ static void ui_draw_vision_distance(UIState *s) {
   float maxspeed = s->scene.controls_state.getVCruise();
   bool is_cruise_set = (maxspeed != 0 && maxspeed != SET_SPEED_NA);
 
-  int extra_h = viz_distance_h + (bdr_s*1.5);
   int viz_distance_w = 184;
   int viz_distance_h = 202;
+  int extra_h = viz_distance_h + (bdr_s*1.5);
   int viz_distance_x = s->scene.viz_rect.x + (bdr_s*2);
   int viz_distance_y = s->scene.viz_rect.y + (bdr_s*1.5) + extra_h;
   int viz_distance_xo = 0;
@@ -252,7 +252,7 @@ static void ui_draw_vision_distance(UIState *s) {
   // Draw Border
   NVGcolor color = COLOR_WHITE_ALPHA(100);
   if (distance < 1.0) {
-    color = nvgRGBA(255, 188, 3, 200)
+    color = nvgRGBA(255, 188, 3, 200);
   }
   if (distance < 0.3) {
     color = nvgRGBA(255, 0, 0, 200);
