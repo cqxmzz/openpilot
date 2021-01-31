@@ -221,10 +221,10 @@ static void ui_draw_vision_distance(UIState *s) {
 
   // Draw Border
   NVGcolor color = COLOR_WHITE_ALPHA(100);
-  if (distance < 1.0) {
+  if (distance < 1.0 && distance > 0) {
     color = nvgRGBA(255, 188, 3, 200);
   }
-  if (distance < 0.3) {
+  if (distance < 0.3 && distance > 0) {
     color = nvgRGBA(255, 0, 0, 200);
   }
   ui_draw_rect(s->vg, viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h, color, 20, 10);
