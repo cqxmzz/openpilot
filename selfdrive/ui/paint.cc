@@ -233,13 +233,13 @@ static void ui_draw_vision_distance(UIState *s) {
 
   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_BASELINE);
   const int text_x = viz_distance_x + (viz_distance_xo / 2) + (viz_distance_w / 2);
-  ui_draw_text(s->vg, text_x, 148 + extra_h, "DIST", 26 * 2.5, color, s->font_sans_regular);
+  ui_draw_text(s->vg, text_x, 148 + extra_h, "DIST", 26 * 2.5, color, "sans-regular");
 
   if (is_cruise_set || distance > 5.0) {
-    ui_draw_text(s->vg, text_x, 242 + extra_h, "N/A", 42 * 2.5, COLOR_WHITE_ALPHA(100), s->font_sans_semibold);
+    ui_draw_text(s->vg, text_x, 242 + extra_h, "N/A", 42 * 2.5, COLOR_WHITE_ALPHA(100), "sans-bold");
   } else {
     snprintf(distance_str, sizeof(distance_str), "%0.2f", distance);
-    ui_draw_text(s->vg, text_x, 242 + extra_h, distance_str, 42 * 2.5, color, s->font_sans_semibold);
+    ui_draw_text(s->vg, text_x, 242 + extra_h, distance_str, 42 * 2.5, color, "sans-semibold");
   }
 }
 
