@@ -37,13 +37,13 @@ getprop ro.serialno
 * UI
 Show ip - done
 Serial number - done - serial:imei, dongleId:api, pandaDongleId:hardware
-Battery - done
+Battery - working
 Brightness - done
 
 * Basic Func
 Volume - done
 No disengage for gas - done
-Show front distance - not tested
+Show front distance - done
 
 * Basic Control
 Gas sets speed
