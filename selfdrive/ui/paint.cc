@@ -216,8 +216,10 @@ static void ui_draw_vision_distance(UIState *s) {
   int viz_distance_xo = 0;
   char distance_str[8];
 
+  const Rect rect = {viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h};
+
   // Draw Background
-  ui_draw_rect(s->vg, viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h, COLOR_BLACK_ALPHA(100), 30);
+  ui_fill_rect(s->vg, rect, COLOR_BLACK_ALPHA(100), 30);
 
   // Draw Border
   NVGcolor color = COLOR_WHITE_ALPHA(100);
@@ -227,7 +229,7 @@ static void ui_draw_vision_distance(UIState *s) {
   if (distance < 0.3 && distance > 0) {
     color = nvgRGBA(255, 0, 0, 200);
   }
-  ui_draw_rect(s->vg, viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h, color, 20, 10);
+  ui_draw_rect(s->vg, rect, color, 20, 10);
 
   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_BASELINE);
   const int text_x = viz_distance_x + (viz_distance_xo / 2) + (viz_distance_w / 2);
