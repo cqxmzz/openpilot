@@ -44,7 +44,7 @@ Brightness - done
 Volume - done
 No disengage for gas - done
 Show front distance - done
-Camera offset
+Camera offset - testing
 
 * Basic Control
 Gas sets speed
