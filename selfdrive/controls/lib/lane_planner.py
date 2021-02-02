@@ -21,6 +21,7 @@ class LanePlanner:
     params = Params()
     camera_offset_str = params.get("CameraOffset")
     if camera_offset_str is not None and camera_offset_str != "":
+      global CAMERA_OFFSET
       CAMERA_OFFSET = 0.01 * int(camera_offset_str)
       params.put("CameraOffset", camera_offset_str)
     self.ll_t = np.zeros((TRAJECTORY_SIZE,))
