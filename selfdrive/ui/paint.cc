@@ -231,6 +231,7 @@ static void ui_draw_vision_maxspeed(UIState *s) {
 }
 
 static void ui_draw_vision_distance(UIState *s) {
+  const int SET_SPEED_NA = 255;
   float distance = s->scene.lead_data[0].getDRel();
   if (distance < 0) {
     distance = 0;
@@ -241,13 +242,14 @@ static void ui_draw_vision_distance(UIState *s) {
   int viz_distance_w = 184;
   int viz_distance_h = 202;
   int extra_h = viz_distance_h + (bdr_s*1.5);
-  int viz_distance_x = s->scene.viz_rect.x + (bdr_s*2);
-  int viz_distance_y = s->scene.viz_rect.y + (bdr_s*1.5) + extra_h;
+  int viz_distance_x = s->viz_rect.x + (bdr_s*2);
+  int viz_distance_y = s->viz_rect.y + (bdr_s*1.5) + extra_h;
   int viz_distance_xo = 0;
   char distance_str[8];
 
   // Draw Background
-  ui_draw_rect(s->vg, viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h, COLOR_BLACK_ALPHA(100), 30);
+  const Rect rect = {viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h};
+  ui_draw_rect(s->vg, rect, COLOR_BLACK_ALPHA(100), 30);
 
   // Draw Border
   NVGcolor color = COLOR_WHITE_ALPHA(100);
@@ -257,7 +259,7 @@ static void ui_draw_vision_distance(UIState *s) {
   if (distance < 0.3 && distance > 0) {
     color = nvgRGBA(255, 0, 0, 200);
   }
-  ui_draw_rect(s->vg, viz_distance_x, viz_distance_y, viz_distance_w, viz_distance_h, color, 20, 10);
+  ui_draw_rect(s->vg, rect, color, 20, 10);
 
   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_BASELINE);
   const int text_x = viz_distance_x + (viz_distance_xo / 2) + (viz_distance_w / 2);
